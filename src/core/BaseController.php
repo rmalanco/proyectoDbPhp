@@ -4,11 +4,12 @@
 
 namespace ProyectoDbPhp\Core;
 
+use ProyectoDbPhp\Config\View;
+
 class BaseController
 {
     public function render($view, $data = [])
     {
-        extract($data);
-        require_once __DIR__ . "/../Views/$view.php";
+        View::render($view, $data);
     }
 }
