@@ -9,7 +9,6 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        // $this->render('home/index');
         $homeRepository = new HomeRepository();
         $homeData = $homeRepository->getHomeData();
         $this->render('home/index', $homeData);
