@@ -3,8 +3,9 @@
 namespace ProyectoDbPhp\Core;
 
 use ProyectoDbPhp\Config\Connection;
+use ProyectoDbPhp\Interfaces\IBaseRepository;
 
-class BaseRepository
+class BaseRepository implements IBaseRepository
 {
     protected $connection;
     protected $table;

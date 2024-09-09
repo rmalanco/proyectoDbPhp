@@ -1,5 +1,7 @@
 <?php
 
+namespace ProyectoDbPhp\Helpers;
+
 class Helpers
 {
     public static function url($url)

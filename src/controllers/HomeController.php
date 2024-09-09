@@ -7,10 +7,17 @@ use ProyectoDbPhp\Repositories\HomeRepository;
 
 class HomeController extends BaseController
 {
+    private $homeRepository;
+
+    public function __construct()
+    {
+        $this->homeRepository = new HomeRepository();
+    }
+
     public function index()
     {
-        $homeRepository = new HomeRepository();
-        $homeData = $homeRepository->getHomeData();
+        $homeData = $this->homeRepository->getHomeData();
+        $this->title = $homeData['titulo'];
         $this->render('home/index', $homeData);
     }
 }

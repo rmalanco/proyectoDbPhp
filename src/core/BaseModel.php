@@ -4,7 +4,9 @@
 
 namespace ProyectoDbPhp\Core;
 
-class BaseModel
+use ProyectoDbPhp\Interfaces\IBaseModel;
+
+class BaseModel implements IBaseModel
 {
     protected $attributes = [];
 

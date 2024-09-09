@@ -9,7 +9,7 @@ class HomeRepository extends BaseRepository
     public function getHomeData()
     {
         return [
-            'title' => 'Home',
+            'titulo' => 'Home',
             'content' => 'Welcome to the home page!',
             'testDataBase' => $this->getTestDataBase()
         ];
